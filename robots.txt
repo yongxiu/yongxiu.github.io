@@ -1,0 +1,6 @@
+User-agent: * 
+Disallow: /wp-admin/
+Disallow: /tag/
+Disallow: /category/
+
+Sitemap: https://yongxiu.net/sitemap.xml

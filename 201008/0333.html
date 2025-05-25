@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>当年人人网的那个bug：人人网刷分器 | yongxiu</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-pagenavi-css" href="https://yongxiu.net/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery-migrate.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-140817911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-140817911-1');</script><link rel="stylesheet" href="https://yongxiu.net/wp-content/plugins/wp-thumbnails/style.css" type="text/css" media="screen"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg" sizes="32x32"><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-180x180.jpg"><meta name="msapplication-TileImage" content="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-270x270.jpg"></head><body class="post-template-default single single-post postid-33 single-format-standard wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://yongxiu.net/" title="yongxiu" rel="home">yongxiu</a></h1>
+			<h2 class="site-description">Make life happen, not just let it happen.</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="https://yongxiu.net/">Home</a></li><li class="page_item page-item-216"><a href="https://yongxiu.net/thanks">Thanks</a></li>
+<li class="page_item page-item-137"><a href="https://yongxiu.net/links">Links</a></li>
+<li class="page_item page-item-5"><a href="https://yongxiu.net/about">About</a></li>
+</ul></div>
+		</nav></header><div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-33" class="post-33 post type-post status-publish format-standard hentry category-c"><header class="entry-header"><h1 class="entry-title">当年人人网的那个bug：人人网刷分器</h1>
+								</header><div class="entry-content">
+			<p>最近很多人问我这个校内48级，28万多分是怎么搞的，校内的bug早已经修好了，谁都没能力再刷分了（应该是如此），那我就说说吧~</p>
+<p>忘了何时开始的，校内推出用户等级，并且等级伴随着特权，其实基本都没有什么用，但有个15级的隐身浏览，蛮吸引人，但当时我离15级不是一般的远啊！</p>
+<p><span id="more-33"></span></p>
+<p>记得是六月初吧，周围的某3人组，开始鼓弄些东西，校内等级一直往上窜，开始没注意，因为平时他们就玩得很多，分数多很正常，但是突然发现校内等级排名前三名就是他们三个，所以肯定其中有猫腻。追问之下才知道，原来校内有个bug，在每天半夜12点到12点十几分，用手机不断登录，就可获得积分，每次10分，这三人每天晚上12点就用IE打开手机版校内，输入账号密码登录后就按BackSpace然后点击鼠标再次登录，于是……</p>
+<p>当时条件限制还是很多的，1 手机登录；2 半夜12点到12点十几分；这不知道当时那个家伙是怎么发现的。效率有多高呢？算算吧，手再慢也有2秒一次，2秒10分，一分钟200分，每天有十几分钟的机会，拿个1000分还是不在话下的。</p>
+<p>于是我也加入到刷等级的行列，刷了几分钟就停止了，这是个体力活啊……</p>
+<p>校内刷分器：想想这个用程序实现好像也不是很难，校内也没用什么SSL加密连接，验证码，就是一个网页表单，表单有用户名和密码。这种密码的肯定就是post了，于是邪恶的计划就开始了，在MFC直接调用Web Browser Control，将这个强大的网络工具拖放到对话框中，上网搜搜相关的操作，而且有份不错的代码可以参考，于是再搞一个SetTimer，Timer为100ms一次，一秒10次，于是呵呵~</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/renren.jpg"><img class="alignnone size-full wp-image-34" title="renren" src="https://yongxiu.net/wp-content/uploads/2010/08/renren.jpg" alt="" width="491" height="520"></a></p>
+<p>登录一次之后按一下start键，你就可以干别的了。</p>
+<p>可能有人会问为什么一秒钟10呢？我设置过1秒钟50次，但由于网络原因还有人人网服务器的原因，50次的效果和10次是一样的。</p>
+<p>于是大家都加入到了机械工业时代，周围人狂刷，20级，30级，但大家都提心吊胆，生怕被删号，都是犹豫着刷。其实我刚开始野心并没那么大，15级足矣，但人就是这样啊……</p>
+<p>刷到快30级了，于是一想45级被删号，还能留着你30级，周围人可都是15级以下啊，每天运作15分钟，就能升80000分左右，到了第3、4天，校内好像终于有所察觉，bug消失，刷分已经没有用了，由于周围的人前几日都犹豫着，本打算今天超过我，但已经没有机会了……</p>
+<p>总结：校内刚开始的技术肯定有漏洞，可以理解，登录的时候如果设置验证码，那么用户的操作体验肯定大打折扣，如果设置SSL加密连接，恐怕校内的服务器，网速，带宽，客户端都承受不起，但如果只设置登录页面为SSL安全连接呢？我认为没有意义。我这种方式试探Google登录毫无作用，直接报错退出。</p>
+<p>为什么只有每天12点之后十几分钟登录可以加分呢？我不太清楚，但我估计可能和人人网的数据库更新有关，具体细节我也搞不清。</p>
+<p>还有一个奇怪的现象就是每个人的12点登录加分的持续时间是不一样的，有的人程序开始几分钟就失效了，有的人长达20分钟，这个我猜测和我前面说的一样和服务器的数据库有关。</p>
+<p>程序现在还有用吗？还能刷分吗？答案是<strong>negative</strong>，当我们刷到第3、4天的时候就已经失效了，当时应该是六月初，我不知道现在校内还有没有其他的bug可以刷分。</p>
+<p>最后希望大家不要轻易用程序设置登录校内，第一是没有什么用，第二是人人网的服务器承受不了。至于其他网站我没有研究过，所以是没有能力刷分的，谢谢！</p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201008/0333.html">https://yongxiu.net/201008/0333.html</a></p>
+</div>
+</blockquote>
+
+
+<div style="float: none; margin:0px 0 0px 0; text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6920353431093279" data-ad-slot="2676618393"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div>					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://yongxiu.net/category/c" rel="category tag">C++</a> on <a href="https://yongxiu.net/201008/0333.html" title="2:42 pm" rel="bookmark"><time class="entry-date" datetime="2010-08-03T14:42:46-08:00">August 3, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://yongxiu.net/author/yongxiu" title="View all posts by yongxiu" rel="author">yongxiu</a></span></span>.								</footer></article><nav class="nav-single"><h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://yongxiu.net/201007/2930.html" rel="prev"><span class="meta-nav">←</span> 更换域名：https://yongxiu.net/</a></span>
+					<span class="nav-next"><a href="https://yongxiu.net/201008/2137.html" rel="next">一个基于C++, MFC的桌面搜索工具：iSearch <span class="meta-nav">→</span></a></span>
+				</nav><div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			1 thought on “<span>当年人人网的那个bug：人人网刷分器</span>”		</h2>
+
+		<ol class="commentlist"><li class="comment even thread-even depth-1" id="li-comment-8">
+		<article id="comment-8" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/4e2fbf1e9044b63e7fb2adea689ff311?s=44&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/4e2fbf1e9044b63e7fb2adea689ff311?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn"><a href="http://yuhanghome.net" rel="external nofollow" class="url">Abraham</a></b> </cite><a href="https://yongxiu.net/201008/0333.html#comment-8"><time datetime="2010-08-21T18:25:57-08:00">August 21, 2010 at 6:25 pm</time></a>				</header><section class="comment-content comment"><p>听一哥们说貌似猫扑当年也有类似的凌晨12点刷分Bug，其中的原理看来还是有点味道的~~</p>
+								</section><div class="reply">
+								</div>
+			</article></li>
+		</ol><p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div>
+
+			
+		</div>
+	</div>
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			
+
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-6920353431093279" data-ad-slot="5119158312"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://yongxiu.net/201211/10259.html">生命的意义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201210/03251.html">The Time Traveler’s Wife</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201204/26243.html">记忆，意识与唯心主义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/05241.html">做一个自由的灵魂</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/01231.html">搜索引擎内容相关性</a>
+									</li>
+					</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">anonymous</span> on <a href="https://yongxiu.net/201007/2215.html#comment-45">和朋友相聚的那些时光</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://yongxiu.net" rel="external nofollow" class="url">yongxiu</a></span> on <a href="https://yongxiu.net/201204/26243.html#comment-29">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Susan</span> on <a href="https://yongxiu.net/201204/26243.html#comment-28">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Jack Lu</span> on <a href="https://yongxiu.net/201204/26243.html#comment-27">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">shuo</span> on <a href="https://yongxiu.net/201201/05241.html#comment-26">做一个自由的灵魂</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://yongxiu.net/2012/11">November 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/10">October 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/04">April 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/01">January 2012</a></li>
+	<li><a href="https://yongxiu.net/2011/04">April 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/03">March 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/02">February 2011</a></li>
+	<li><a href="https://yongxiu.net/2010/12">December 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/10">October 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/08">August 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/07">July 2010</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul><li class="cat-item cat-item-2"><a href="https://yongxiu.net/category/c">C++</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://yongxiu.net/category/linux">linux</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="https://yongxiu.net/category/search-technology">Search Technology</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://yongxiu.net/category/%e6%84%9f%e6%82%9f">感悟</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://yongxiu.net/category/%e7%94%9f%e6%b4%bb">生活</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://yongxiu.net/category/films" title="我喜欢的那些电影">电影</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae">网络协议</a>
+</li>
+		</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+<script type="text/javascript" src="https://yongxiu.net/wp-content/themes/twentytwelve/js/navigation.js"></script></body></html>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C++ &#8211; yongxiu</title>
+	<atom:link href="https://yongxiu.net/tag/c/feed" rel="self" type="application/rss+xml" />
+	<link>https://yongxiu.net/</link>
+	<description>Make life happen, not just let it happen.</description>
+	<lastBuildDate>Sun, 26 May 2019 23:54:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.1</generator>
+
+<image>
+	<url>https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg</url>
+	<title>C++ &#8211; yongxiu</title>
+	<link>https://yongxiu.net/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>当年做的蛮开心的一个小程序</title>
+		<link>https://yongxiu.net/201104/13205.html</link>
+				<comments>https://yongxiu.net/201104/13205.html#respond</comments>
+				<pubDate>Wed, 13 Apr 2011 05:41:17 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[customer control]]></category>
+		<category><![CDATA[MFC]]></category>
+		<category><![CDATA[VS2008]]></category>
+		<category><![CDATA[效率]]></category>
+		<category><![CDATA[数独]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=205</guid>
+				<description><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/04/sudoku.png"></a>
+回顾了一下，发现自己这么久以来做了很多的项目，参与到了很多的项目，也有上10万行代码的项目，但发现自己做的最开心的其实是一个数独游戏，在那个游戏也不是去增加程序的功能的快乐，而是去提高算法效率上收获了很多，之后又尝试去做象棋，体会到为了提高效率的辛苦，甚至后来为了参加比赛而写代码，在读取写入文件榨 <span class='read-more'><a href='https://yongxiu.net/201104/13205.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/04/sudoku.png"><img class="size-full wp-image-206 alignnone" title="sudoku" src="https://yongxiu.net/wp-content/uploads/2011/04/sudoku.png" alt="" width="640" height="676" /></a><br />
+回顾了一下，发现自己这么久以来做了很多的项目，参与到了很多的项目，也有上10万行代码的项目，但发现自己做的最开心的其实是一个数独游戏，在那个游戏也不是去增加程序的功能的快乐，而是去提高算法效率上收获了很多，之后又尝试去做象棋，体会到为了提高效率的辛苦，甚至后来为了参加比赛而写代码，在读取写入文件榨取那么几毫秒的时间。再后来养成了一定的习惯，无论写完什么，之后总是前后考虑对效率的影响，是否已经发挥到了极限，是否还可以继续提高效率，减小内存的开支，有的时候走在路上，睡觉前，上课走神的时候甚至都会考虑一下，也许这就是代码的乐趣吧！</p>
+<p>如今想来，刚开始其实不懂，很多的时候是为了项目而做项目，于是做了一个又一个网站，但如今看来那些算什么呢，感触最深的是自己用了什么什么框架写了多少多少行代码，窃窃自喜，但突然发现大牛写了一个框架去给别人使用的时候发现了自己多么的愚蠢。</p>
+<p>回想这个数独游戏，是在2010年初写的，界面操作模仿数独博士，现在看来也还算很不错的，当时花了很长的时间去提高它的效率，记得有一道题目，是专门针对普通算法的题，普通的穷举基本卡死，要4、5秒钟，后来我降到1秒，降到200ms，降到50ms，最后降到了5ms，这其中的乐趣不是能描述出来的。界面也花了很大的功夫，很多时候为了一个小控件的使用方法，自定义控件，图片的颜色，GDI+，windows消息机制，google了好久，此后的好久我再写MFC程序的时候都要翻翻这个小程序找到一些用法。程序中使用了3个customer control，自己定义样式，属性，事件，其实很多人抱怨MFC控件少，老，陈旧，都是片面的，现在的桌面程序还没有几个完全是.NET写的，当自己创建一个控件，然后使用，会发现MFC的健壮性，扩展性直到如今都是那么值得称赞。</p>
+<p>但是后来又没有完成所有功能，好像是累了，懒了，不愿写了，功能都是重复的，就是填代码了，缺少了刚开始的兴奋，所以就没写完。但也可以玩一玩，还是蛮有趣的。</p>
+<p>现在我就把它开源出来，给那些MFC的初学者一个小例子，希望能够帮助到一些人，环境是VS2008 SP1</p>
+<p>项目地址：<a href="http://code.google.com/p/sudoku-xiu/">http://code.google.com/p/sudoku-xiu/</a></p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201104/13205.html">https://yongxiu.net/201104/13205.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201104/13205.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>C++ 内存管理及STL 那点事</title>
+		<link>https://yongxiu.net/201012/1497.html</link>
+				<comments>https://yongxiu.net/201012/1497.html#respond</comments>
+				<pubDate>Tue, 14 Dec 2010 12:33:55 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[g++]]></category>
+		<category><![CDATA[new]]></category>
+		<category><![CDATA[stl]]></category>
+		<category><![CDATA[vs2010]]></category>
+		<category><![CDATA[内存泄露]]></category>
+		<category><![CDATA[内存管理]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=97</guid>
+				<description><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2010/12/c-logo.gif"></a>最近抽了点时间研究下STL，也顺便复习下侯捷的C++内存管理，发现自己基础很薄弱啊，下面把自己这几天看到的，想到的写一下，给那些走在C++学习之路的同学们一点经验和建议，当然本人资质浅薄，可能纰漏百出，还请大家指正。</p><p>我在研究STL的时候环境是VS2010，看的书是侯捷的《STL源码剖析》，所以 <span class='read-more'><a href='https://yongxiu.net/201012/1497.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2010/12/c-logo.gif"><img class="alignleft size-full wp-image-111" title="c-logo" src="https://yongxiu.net/wp-content/uploads/2010/12/c-logo.gif" alt="" width="203" height="162" /></a>最近抽了点时间研究下STL，也顺便复习下侯捷的C++内存管理，发现自己基础很薄弱啊，下面把自己这几天看到的，想到的写一下，给那些走在C++学习之路的同学们一点经验和建议，当然本人资质浅薄，可能纰漏百出，还请大家指正。</p>
+<p>我在研究STL的时候环境是VS2010，看的书是侯捷的《STL源码剖析》，所以经常出现一些和书上对应不上的情况出现，首先建议大家研究这种库的时候，可以在g++编译环境下，然后按照书中的要求下载一份SGI STL，或者直接使用linux下提供的stl，这样可以免去不一致的麻烦，毕竟我们主要是学习其原理，并不一定要把所有版本的STL研究透彻，微软的STL做的肯定不会比其他的差，但是按照书上一步一步走肯定能少走些路嘛~</p>
+<p>首先说下我在VS2010碰到的第一个问题，我们知道STL的vector&lt;int&gt;::iterator 其实应该是一个int型指针，首先萃取器会提取出int的类型，发现时一个int不是指针，所以对应的iterator会变成一个int*。有如下代码：</p>
+<pre class="”brush:c++&quot;">#include &lt;iostream&gt;
+
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main()
+
+{
+
+vector&lt;int&gt;::iterator iter;
+
+cout &lt;&lt; sizeof(iter) &lt;&lt; endl;
+
+return 0;
+
+}</pre>
+<p>上述代码在VS2010中，输出为12，显然vs2010在iterator中还加入了其他的东西，在g++中显示的为4，就是一个int型的指针了。上述的例子我还可以举出很多，在STL的学习中，我们一定要记得STL实现的是一个可以为大家方便使用的类库，其表现是相同的，但其内部的原理是不一样的。</p>
+<p>还有一个我在初学时碰到的问题：int* list = new int[10];这句话的意思是申请10个int型的空间，调用delete可以归还相应的空间，可是delete方法是怎么知道原先申请了多少的空间呢？如果我们在中途使用delete[] &amp;list[1]会出现什么现象？</p>
+<p>如果delete[] &amp;list[1]，程序会出错，并且内存泄露，当我们调用new int[10]的时候，其实我们申请了不仅仅10个int空间（40bytes)，如下代码可以清晰地解释一下：</p>
+<pre class="”brush:c++&quot;">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+
+{
+
+void* vp;
+
+int* l = new int[6];
+
+for(int i = 0;i &lt; 6;i ++)
+
+{
+
+l[i] = i;
+
+}
+
+vp = (void*) &amp;l[0];
+
+char* c = (char*) vp;
+
+for(int i = -28;i &lt; 36;i ++)
+
+{
+
+cout &lt;&lt; i &lt;&lt; ": " &lt;&lt; (int) c[i] &lt;&lt; endl;
+
+}
+
+delete[] l;
+
+return 0;
+
+}</pre>
+<p>结果显示为：</p>
+<pre class="brush:shell">-28: 0
+
+-27: 46
+
+-26: 91
+
+-25: 0
+
+-24: 0
+
+-23: 0
+
+-22: 0
+
+-21: 0
+
+-20: 0
+
+-19: 0
+
+-18: 0
+
+-17: 0
+
+-16: 24
+
+-15: 0
+
+-14: 0
+
+-13: 0
+
+-12: 1
+
+-11: 0
+
+-10: 0
+
+-9: 0
+
+-8: 126
+
+-7: 0
+
+-6: 0
+
+-5: 0
+
+-4: -3
+
+-3: -3
+
+-2: -3
+
+-1: -3
+
+0: 0
+
+1: 0
+
+2: 0
+
+3: 0
+
+4: 1
+
+5: 0
+
+6: 0
+
+7: 0
+
+8: 2
+
+9: 0
+
+10: 0
+
+11: 0
+
+12: 3
+
+13: 0
+
+14: 0
+
+15: 0
+
+16: 4
+
+17: 0
+
+18: 0
+
+19: 0
+
+20: 5
+
+21: 0
+
+22: 0
+
+23: 0
+
+24: -3
+
+25: -3
+
+26: -3
+
+27: -3
+
+28: 0
+
+29: 0
+
+30: 0
+
+31: 0
+
+32: -65
+
+33: -52
+
+34: 82
+
+35: 100</pre>
+<div>其中-28 到-25、32到35为随机显示，未知数，其他在vs2010中显示的应该都一样，根据大量数据的检测，结果相同，所以可以猜测，-16到-13表示的是数组的大小bytes，其他应该是数组的边界特殊表示符。</div>
+<div>根据侯捷的C++内存管理，我们知道，其实new在底层是调用的malloc，c++内存池保管着几个内存链，所以C++ 在new 一个数组的时候，前端是有cookie表示数组的大小（后端我记得也有，好像是取整的一段吧，就是8， 14， 32……等有cookie）delete调用的时候，根据cookie来归还给内存池，调用new方法的时候，根据大小再适当分配。</div>
+<div>以上测验在VS2010上通过，数据表示方法在g++中是不一样的，内存泄露是c/c++程序员不可躲避的一个问题，理解了底层的原理能够更好的帮助我们了解和更好的工作。</div>
+<div>参考资料：</div>
+<div>《STL源码剖析》</div>
+<div>《C++内存管理》</div>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201012/1497.html">https://yongxiu.net/201012/1497.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201012/1497.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>一个基于C++, MFC的桌面搜索工具：iSearch</title>
+		<link>https://yongxiu.net/201008/2137.html</link>
+				<comments>https://yongxiu.net/201008/2137.html#comments</comments>
+				<pubDate>Sat, 21 Aug 2010 09:39:05 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[iSearch]]></category>
+		<category><![CDATA[MFC]]></category>
+		<category><![CDATA[搜索]]></category>
+		<category><![CDATA[桌面]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=37</guid>
+				<description><![CDATA[<p>前段时间看到宇航大牛做了一个VB.NET的QuickRun，感觉确实不错，于是练练手把代码下载了下来，自己仔细研读了一下，于是我打算用C#做个升级版，但正在我写到一半的时候，突然发现蒋大牛又写了一个FastAccess，就是QuickRun的升级版，功能确实也升级了很多，竟然抢先我一步。。。WPF在界面上确实有着不可比拟的方便快捷，好似在写网页和JS一般。</p><p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg"></a> <span class='read-more'><a href='https://yongxiu.net/201008/2137.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p>前段时间看到宇航大牛做了一个VB.NET的QuickRun，感觉确实不错，于是练练手把代码下载了下来，自己仔细研读了一下，于是我打算用C#做个升级版，但正在我写到一半的时候，突然发现蒋大牛又写了一个FastAccess，就是QuickRun的升级版，功能确实也升级了很多，竟然抢先我一步。。。WPF在界面上确实有着不可比拟的方便快捷，好似在写网页和JS一般。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg"><img class="alignnone size-full wp-image-40" title="Untitled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg" alt="" width="489" height="268" /></a><span id="more-37"></span></p>
+<p>当然WPF也有他的致命缺点，就是必须运行在.NET平台下，于是乎，本着对C++执着的追求，我就用C++，MFC下写了一个，思想主要借鉴了Google Desktop，Google Desktop是一款桌面搜索软件，安装完之后，软件会在电脑空闲的时间，搜索整个计算机，建立索引，在用户双击Ctrl时，呼出搜索框，方便用户快速打开任一文件，但我用了有半年，缺点就是像我这种经常安装各种软件的人，很多时候，Google Desktop的更新速度不够快，占用硬盘过大，想自己向其中添加，却没有办法。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png"><img class="size-full wp-image-39 alignnone" title="Untiaatled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png" alt="" width="197" height="131" /></a></p>
+<p>经过几天的不懈奋斗，查过无数的资料后，写下近万行代码后，我的iSearch诞生了，我本人一直很欣赏MS的Aero特效，那种玻璃磨砂的透明我一直比较欣赏和喜欢，所以这个程序只好牺牲了广大的XP以下用户。。。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg"><img class="alignnone size-full wp-image-43" title="Untitleooidfd" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg" alt="" width="395" height="219" /></a></p>
+<p>程序思想其实很简单，主要有几个难点：MFC的系统托盘，热键钩子，注册表，Aero特效，Windows的各种API，CWnd类的各个操作，MFC提供的各个控件基本都不能满足要求，很多时候都是要自己继承CWnd类，重新定义控件的属性。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png"><img class="alignnone size-full wp-image-41" title="Untitled-1" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png" alt="" width="149" height="147" /></a></p>
+<p>MFC的CStringArray, CMap等容器虽然比较老，但效率还是一流的，XML文件的解析，其实一直想用XMLBooster，效率据说很赞，但可惜网上的资料有点少。irrXml这种游戏的xml解析器我也考虑过，但是irr的这个只支持读，不支持写。。。最后只好用了MS的MSXML，效率其实没有传的那么惨。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg"><img class="alignright size-full wp-image-44" title="Untitljaifdsed" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg" alt="" width="512" height="403" /></a></p>
+<p>至于搜索，用的就是比较笨的穷举，反正用户不可能添加上亿个软件，效率不会差的很远。iEditor中如果添加的是一个快捷方式文件，软件将能够解析快捷方式文件，读取目标的实际地址。</p>
+<p>iEditor只是个附属的xml编辑软件，所以在它的人性化设置上并没有下太大的功夫，记得将软件拖到里面之后保存一下就好了，设置中有开机随机启动的选项，由于需要修改注册表，所以我将它设置为了Run As Administrator。</p>
+<p>整个软件代码量是14000行，那个iEditor的DataGridView其实是一个我从网上下的高人写的control，我自己写的其实也没有多少，软件还有很多需要改进的地方，例如钩子不够低级，在IE中就没办法勾到双击ctrl键的消息，呼出搜索框有时会不能显示，这个头痛的问题，想了很多解决方法都没有一个万全之策，iEditor的人性化操作还不够，软件启动的时候会将所有用到的软件的图标读取到内存，所以如果软件很多的话，硬盘会转那么几秒钟，我其实想将图标保存到xml文件里，但是msxml功能实在是。。。下一个版本再修正吧。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png"><img class="size-full wp-image-49 alignnone" title="asdfed" src="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png" alt="" width="322" height="270" /></a></p>
+<p>下载之后解压到任意一个地方，之后双击打开iSearch.exe，就可以运行软件了，当然刚开始由于你什么软件都没有放进去，所以什么都搜索不到，打开iEditor.exe，之后将你常用的软件拖到窗口里，之后记得要保存，保存之后就可以了，之后双击键盘上的ctrl键，就可以呼出搜索框，按回车打开软件，在iEditor中的option中可以设置随开机启动，最后欢迎大家使用哈！</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png"><img class="alignnone size-full wp-image-42" title="Untitled3" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png" alt="" width="475" height="278" /></a></p>
+<p>项目主页：<a href="http://code.google.com/p/i-search/">http://code.google.com/p/i-search/</a></p>
+<p>下载地址：<a href="http://i-search.googlecode.com/files/iSearch.zip">http://i-search.googlecode.com/files/iSearch.zip</a></p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201008/2137.html">https://yongxiu.net/201008/2137.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201008/2137.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

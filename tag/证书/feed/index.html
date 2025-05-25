@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>证书 &#8211; yongxiu</title>
+	<atom:link href="https://yongxiu.net/tag/%e8%af%81%e4%b9%a6/feed" rel="self" type="application/rss+xml" />
+	<link>https://yongxiu.net/</link>
+	<description>Make life happen, not just let it happen.</description>
+	<lastBuildDate>Sun, 26 May 2019 23:54:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.1</generator>
+
+<image>
+	<url>https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg</url>
+	<title>证书 &#8211; yongxiu</title>
+	<link>https://yongxiu.net/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>ssl和https协议详解</title>
+		<link>https://yongxiu.net/201102/24157.html</link>
+				<comments>https://yongxiu.net/201102/24157.html#respond</comments>
+				<pubDate>Thu, 24 Feb 2011 11:53:41 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[生活]]></category>
+		<category><![CDATA[https]]></category>
+		<category><![CDATA[ssl]]></category>
+		<category><![CDATA[加密]]></category>
+		<category><![CDATA[协议]]></category>
+		<category><![CDATA[证书]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=157</guid>
+				<description><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/02/teaserBG_IMG_ssl1.jpg"></a></p><p>把这几天学习到的关于ssl和https协议的内容在这里分享一下，适合一些像我一样的网络协议初学者。</p><p>ssl协议的起源和历史我就不再多说了，就是那个Netscape 网景公司开发的，它的作用主要是提供了一种安全传输方式，我们知道网上有很多的时候需要我们去输入用户名和密码，那么假设我们自己的电 <span class='read-more'><a href='https://yongxiu.net/201102/24157.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/02/teaserBG_IMG_ssl1.jpg"><img class="aligncenter size-full wp-image-158" title="teaserBG_IMG_ssl" src="https://yongxiu.net/wp-content/uploads/2011/02/teaserBG_IMG_ssl1.jpg" alt="" width="678" height="288" /></a></p>
+<p>把这几天学习到的关于ssl和https协议的内容在这里分享一下，适合一些像我一样的网络协议初学者。</p>
+<p>ssl协议的起源和历史我就不再多说了，就是那个Netscape 网景公司开发的，它的作用主要是提供了一种安全传输方式，我们知道网上有很多的时候需要我们去输入用户名和密码，那么假设我们自己的电脑防病毒还可以，但是用户名和密码肯定还是要通过互联网来传到服务器那里，这个步骤就要经过很多的路由等，如果明文传输，就可以在你的局域网内或者通过的路由中监听，窃取你的用户名密码。</p>
+<p>SSL协议位于TCP/IP协议与各种应用层协议之间。当我们打开一个https的网页时，步骤如下：</p>
+<p>1. 客户端通过SSL协议把服务器需要的客户端的SSL版本信息，加密算法设置，会话数据，发送给服务器。</p>
+<p>2. 服务器通过SSL协议把自己的SSL的版本信息，加密算法设置，会话数据和其他通信需要的信息发给客户端。服务器也把服务器的证书发给客户端，另外如果客户端请求服务器资源需要客户端认证，服务器端就会请求客户端的证书。</p>
+<p>3. 客户端使用这些服务器发来的信息认证服务器。如果服务器不能被认证，那么客户将被提示一个警告，并且通知客户不能建立加密和认证连接。如果服务器被成功认证，客户端将进入第四步。</p>
+<p>4. 使用到目前为止的所有数据生成握手过程。客户端(和服务器合作之下)为会话创建一个pre-master secret(一个用在对称加密密钥生成中的 46 字节的随机数字)。使用服务器的公共密钥加密（在第二步的服务器的证书中获得公共密钥），然后把这个加了密的pre-master secret发送给服务器。</p>
+<p>5. 如果服务器请求客户端认证（在握手过程是可选项），客户端也需要标记一个特殊的数据包，客户端和服务器都知道的。在这个过程中，客户端发送一个通过pre-master secret加密过的标记的数据包和客户端自己的证书给服务器。</p>
+<p>6. 如果服务器请求了客户端的认证，那么服务器就要尝试去认证客户端。（具体的看客户端认证细节）如果客户端认证不通过，会话将被终止。如果客户端被认证通过，服务器将使用私有密钥解密pre-master secret，然后执行一系列步骤生成master secret</p>
+<p>7. 客户端和服务器端使用master secret去生成会话密钥。会话密码是在ssl 会话的时候对称密钥被用来加密，解密信息校验信息完整性的密钥。（检查会话过程中任何数据改变）</p>
+<p>8. 客户端发送一个信息给服务器端，通知服务器端未来的信息将被会话密码加密，然后客户端发送一个单独（加密）信息指示客户端部分的握手会话已经完成。</p>
+<p>9. 服务器发送一个信息通知客户端未来的会话信息将被会话密码加密，然后服务器发送一个单独（加密）信息指示服务器部分的握手部分已经完成</p>
+<p>10. SSL握手结束，开始正式会话。客户端和服务器端使用对称会话密钥加密解密数据并且互相传送校验完整性。</p>
+<p>11. 这是一个正常的操作过程和加密隧道。在任何时候，当内部或者外部触发条件（不是自动就是用户手动），任何一端就要从新协商会话，所有的流程将从新开始。</p>
+<p>有几个问题我在学过之后一直在考虑：</p>
+<h3>1. 如果中间的路由从双方发送证书的时候就开始监听的话呢，是否就可以窃取内容了？</h3>
+<p>
+答：否，服务器那边有一个<a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">非对称密钥加密系统</a>，首先他将公开密钥发送给客户端，客户端接收之后为会话创建一个pre-master secret(一个用在对称加密密钥生成中的 46 字节的随机数字)，然后用服务器发送过来的公开密钥加密，然后将加密后的内容发送给服务器，这两个阶段，如果有人监听，即使窃取到也没办法，首先公开密钥对所有人其实都是公开的，用公开密钥加密后的内容是非常非常难解密的，只有用服务器自己有的私有密钥解密才可以。服务器获取到46字节的随机数字之后，通过这个来对将来要发送的加密内容加密，而这个解密方法之后对应的那个客户端才知道，钥匙是通过公开密钥加密的，其他人都不知道，所有就保证了内容的安全性。</p>
+<h3>2. 我们自己建设的网站有时会使用没有正式证书的ssl加密，浏览器会提醒用户，默认建议关闭，证书是必要的吗？</h3>
+<p>
+答：经过认证的证书其实就是确保网站的真实性，还有一些专门的使地址栏显示为绿色的也都是确保网站的真实性，防止一些页面一模一样的钓鱼网站。</p>
+<h3>3. 用ssl协议之后，我们输入用户名密码就绝对安全了吗？</h3>
+<p>
+答：否，ssl协议只能保证server和client传输之间的安全，如果你的电脑有木马病毒，例如监听键盘，浏览器恶意插件等，ssl可管不了这些。。。还有如果server收到攻击，它的信息流失丢掉，这也不能保证的。</p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201102/24157.html">https://yongxiu.net/201102/24157.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201102/24157.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

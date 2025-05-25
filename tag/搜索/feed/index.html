@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>搜索 &#8211; yongxiu</title>
+	<atom:link href="https://yongxiu.net/tag/%e6%90%9c%e7%b4%a2/feed" rel="self" type="application/rss+xml" />
+	<link>https://yongxiu.net/</link>
+	<description>Make life happen, not just let it happen.</description>
+	<lastBuildDate>Sun, 26 May 2019 23:54:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.1</generator>
+
+<image>
+	<url>https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg</url>
+	<title>搜索 &#8211; yongxiu</title>
+	<link>https://yongxiu.net/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>一个基于C++, MFC的桌面搜索工具：iSearch</title>
+		<link>https://yongxiu.net/201008/2137.html</link>
+				<comments>https://yongxiu.net/201008/2137.html#comments</comments>
+				<pubDate>Sat, 21 Aug 2010 09:39:05 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[iSearch]]></category>
+		<category><![CDATA[MFC]]></category>
+		<category><![CDATA[搜索]]></category>
+		<category><![CDATA[桌面]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=37</guid>
+				<description><![CDATA[<p>前段时间看到宇航大牛做了一个VB.NET的QuickRun，感觉确实不错，于是练练手把代码下载了下来，自己仔细研读了一下，于是我打算用C#做个升级版，但正在我写到一半的时候，突然发现蒋大牛又写了一个FastAccess，就是QuickRun的升级版，功能确实也升级了很多，竟然抢先我一步。。。WPF在界面上确实有着不可比拟的方便快捷，好似在写网页和JS一般。</p><p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg"></a> <span class='read-more'><a href='https://yongxiu.net/201008/2137.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p>前段时间看到宇航大牛做了一个VB.NET的QuickRun，感觉确实不错，于是练练手把代码下载了下来，自己仔细研读了一下，于是我打算用C#做个升级版，但正在我写到一半的时候，突然发现蒋大牛又写了一个FastAccess，就是QuickRun的升级版，功能确实也升级了很多，竟然抢先我一步。。。WPF在界面上确实有着不可比拟的方便快捷，好似在写网页和JS一般。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg"><img class="alignnone size-full wp-image-40" title="Untitled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg" alt="" width="489" height="268" /></a><span id="more-37"></span></p>
+<p>当然WPF也有他的致命缺点，就是必须运行在.NET平台下，于是乎，本着对C++执着的追求，我就用C++，MFC下写了一个，思想主要借鉴了Google Desktop，Google Desktop是一款桌面搜索软件，安装完之后，软件会在电脑空闲的时间，搜索整个计算机，建立索引，在用户双击Ctrl时，呼出搜索框，方便用户快速打开任一文件，但我用了有半年，缺点就是像我这种经常安装各种软件的人，很多时候，Google Desktop的更新速度不够快，占用硬盘过大，想自己向其中添加，却没有办法。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png"><img class="size-full wp-image-39 alignnone" title="Untiaatled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png" alt="" width="197" height="131" /></a></p>
+<p>经过几天的不懈奋斗，查过无数的资料后，写下近万行代码后，我的iSearch诞生了，我本人一直很欣赏MS的Aero特效，那种玻璃磨砂的透明我一直比较欣赏和喜欢，所以这个程序只好牺牲了广大的XP以下用户。。。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg"><img class="alignnone size-full wp-image-43" title="Untitleooidfd" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg" alt="" width="395" height="219" /></a></p>
+<p>程序思想其实很简单，主要有几个难点：MFC的系统托盘，热键钩子，注册表，Aero特效，Windows的各种API，CWnd类的各个操作，MFC提供的各个控件基本都不能满足要求，很多时候都是要自己继承CWnd类，重新定义控件的属性。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png"><img class="alignnone size-full wp-image-41" title="Untitled-1" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png" alt="" width="149" height="147" /></a></p>
+<p>MFC的CStringArray, CMap等容器虽然比较老，但效率还是一流的，XML文件的解析，其实一直想用XMLBooster，效率据说很赞，但可惜网上的资料有点少。irrXml这种游戏的xml解析器我也考虑过，但是irr的这个只支持读，不支持写。。。最后只好用了MS的MSXML，效率其实没有传的那么惨。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg"><img class="alignright size-full wp-image-44" title="Untitljaifdsed" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg" alt="" width="512" height="403" /></a></p>
+<p>至于搜索，用的就是比较笨的穷举，反正用户不可能添加上亿个软件，效率不会差的很远。iEditor中如果添加的是一个快捷方式文件，软件将能够解析快捷方式文件，读取目标的实际地址。</p>
+<p>iEditor只是个附属的xml编辑软件，所以在它的人性化设置上并没有下太大的功夫，记得将软件拖到里面之后保存一下就好了，设置中有开机随机启动的选项，由于需要修改注册表，所以我将它设置为了Run As Administrator。</p>
+<p>整个软件代码量是14000行，那个iEditor的DataGridView其实是一个我从网上下的高人写的control，我自己写的其实也没有多少，软件还有很多需要改进的地方，例如钩子不够低级，在IE中就没办法勾到双击ctrl键的消息，呼出搜索框有时会不能显示，这个头痛的问题，想了很多解决方法都没有一个万全之策，iEditor的人性化操作还不够，软件启动的时候会将所有用到的软件的图标读取到内存，所以如果软件很多的话，硬盘会转那么几秒钟，我其实想将图标保存到xml文件里，但是msxml功能实在是。。。下一个版本再修正吧。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png"><img class="size-full wp-image-49 alignnone" title="asdfed" src="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png" alt="" width="322" height="270" /></a></p>
+<p>下载之后解压到任意一个地方，之后双击打开iSearch.exe，就可以运行软件了，当然刚开始由于你什么软件都没有放进去，所以什么都搜索不到，打开iEditor.exe，之后将你常用的软件拖到窗口里，之后记得要保存，保存之后就可以了，之后双击键盘上的ctrl键，就可以呼出搜索框，按回车打开软件，在iEditor中的option中可以设置随开机启动，最后欢迎大家使用哈！</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png"><img class="alignnone size-full wp-image-42" title="Untitled3" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png" alt="" width="475" height="278" /></a></p>
+<p>项目主页：<a href="http://code.google.com/p/i-search/">http://code.google.com/p/i-search/</a></p>
+<p>下载地址：<a href="http://i-search.googlecode.com/files/iSearch.zip">http://i-search.googlecode.com/files/iSearch.zip</a></p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201008/2137.html">https://yongxiu.net/201008/2137.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201008/2137.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

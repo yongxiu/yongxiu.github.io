@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>一个基于C++, MFC的桌面搜索工具：iSearch | yongxiu</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-pagenavi-css" href="https://yongxiu.net/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery-migrate.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-140817911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-140817911-1');</script><link rel="stylesheet" href="https://yongxiu.net/wp-content/plugins/wp-thumbnails/style.css" type="text/css" media="screen"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg" sizes="32x32"><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-180x180.jpg"><meta name="msapplication-TileImage" content="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-270x270.jpg"></head><body class="post-template-default single single-post postid-37 single-format-standard wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://yongxiu.net/" title="yongxiu" rel="home">yongxiu</a></h1>
+			<h2 class="site-description">Make life happen, not just let it happen.</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="https://yongxiu.net/">Home</a></li><li class="page_item page-item-216"><a href="https://yongxiu.net/thanks">Thanks</a></li>
+<li class="page_item page-item-137"><a href="https://yongxiu.net/links">Links</a></li>
+<li class="page_item page-item-5"><a href="https://yongxiu.net/about">About</a></li>
+</ul></div>
+		</nav></header><div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-37" class="post-37 post type-post status-publish format-standard hentry category-c tag-c tag-isearch tag-mfc tag-88 tag-95"><header class="entry-header"><h1 class="entry-title">一个基于C++, MFC的桌面搜索工具：iSearch</h1>
+								</header><div class="entry-content">
+			<p>前段时间看到宇航大牛做了一个VB.NET的QuickRun，感觉确实不错，于是练练手把代码下载了下来，自己仔细研读了一下，于是我打算用C#做个升级版，但正在我写到一半的时候，突然发现蒋大牛又写了一个FastAccess，就是QuickRun的升级版，功能确实也升级了很多，竟然抢先我一步。。。WPF在界面上确实有着不可比拟的方便快捷，好似在写网页和JS一般。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg"><img class="alignnone size-full wp-image-40" title="Untitled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled.jpg" alt="" width="489" height="268"></a><span id="more-37"></span></p>
+<p>当然WPF也有他的致命缺点，就是必须运行在.NET平台下，于是乎，本着对C++执着的追求，我就用C++，MFC下写了一个，思想主要借鉴了Google Desktop，Google Desktop是一款桌面搜索软件，安装完之后，软件会在电脑空闲的时间，搜索整个计算机，建立索引，在用户双击Ctrl时，呼出搜索框，方便用户快速打开任一文件，但我用了有半年，缺点就是像我这种经常安装各种软件的人，很多时候，Google Desktop的更新速度不够快，占用硬盘过大，想自己向其中添加，却没有办法。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png"><img class="size-full wp-image-39 alignnone" title="Untiaatled" src="https://yongxiu.net/wp-content/uploads/2010/08/Untiaatled.png" alt="" width="197" height="131"></a></p>
+<p>经过几天的不懈奋斗，查过无数的资料后，写下近万行代码后，我的iSearch诞生了，我本人一直很欣赏MS的Aero特效，那种玻璃磨砂的透明我一直比较欣赏和喜欢，所以这个程序只好牺牲了广大的XP以下用户。。。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg"><img class="alignnone size-full wp-image-43" title="Untitleooidfd" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitleooidfd.jpg" alt="" width="395" height="219"></a></p>
+<p>程序思想其实很简单，主要有几个难点：MFC的系统托盘，热键钩子，注册表，Aero特效，Windows的各种API，CWnd类的各个操作，MFC提供的各个控件基本都不能满足要求，很多时候都是要自己继承CWnd类，重新定义控件的属性。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png"><img class="alignnone size-full wp-image-41" title="Untitled-1" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled-1.png" alt="" width="149" height="147"></a></p>
+<p>MFC的CStringArray, CMap等容器虽然比较老，但效率还是一流的，XML文件的解析，其实一直想用XMLBooster，效率据说很赞，但可惜网上的资料有点少。irrXml这种游戏的xml解析器我也考虑过，但是irr的这个只支持读，不支持写。。。最后只好用了MS的MSXML，效率其实没有传的那么惨。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg"><img class="alignright size-full wp-image-44" title="Untitljaifdsed" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitljaifdsed.jpg" alt="" width="512" height="403"></a></p>
+<p>至于搜索，用的就是比较笨的穷举，反正用户不可能添加上亿个软件，效率不会差的很远。iEditor中如果添加的是一个快捷方式文件，软件将能够解析快捷方式文件，读取目标的实际地址。</p>
+<p>iEditor只是个附属的xml编辑软件，所以在它的人性化设置上并没有下太大的功夫，记得将软件拖到里面之后保存一下就好了，设置中有开机随机启动的选项，由于需要修改注册表，所以我将它设置为了Run As Administrator。</p>
+<p>整个软件代码量是14000行，那个iEditor的DataGridView其实是一个我从网上下的高人写的control，我自己写的其实也没有多少，软件还有很多需要改进的地方，例如钩子不够低级，在IE中就没办法勾到双击ctrl键的消息，呼出搜索框有时会不能显示，这个头痛的问题，想了很多解决方法都没有一个万全之策，iEditor的人性化操作还不够，软件启动的时候会将所有用到的软件的图标读取到内存，所以如果软件很多的话，硬盘会转那么几秒钟，我其实想将图标保存到xml文件里，但是msxml功能实在是。。。下一个版本再修正吧。</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png"><img class="size-full wp-image-49 alignnone" title="asdfed" src="https://yongxiu.net/wp-content/uploads/2010/08/asdfed.png" alt="" width="322" height="270"></a></p>
+<p>下载之后解压到任意一个地方，之后双击打开iSearch.exe，就可以运行软件了，当然刚开始由于你什么软件都没有放进去，所以什么都搜索不到，打开iEditor.exe，之后将你常用的软件拖到窗口里，之后记得要保存，保存之后就可以了，之后双击键盘上的ctrl键，就可以呼出搜索框，按回车打开软件，在iEditor中的option中可以设置随开机启动，最后欢迎大家使用哈！</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png"><img class="alignnone size-full wp-image-42" title="Untitled3" src="https://yongxiu.net/wp-content/uploads/2010/08/Untitled3.png" alt="" width="475" height="278"></a></p>
+<p>项目主页：<a href="http://code.google.com/p/i-search/">http://code.google.com/p/i-search/</a></p>
+<p>下载地址：<a href="http://i-search.googlecode.com/files/iSearch.zip">http://i-search.googlecode.com/files/iSearch.zip</a></p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201008/2137.html">https://yongxiu.net/201008/2137.html</a></p>
+</div>
+</blockquote>
+
+
+<div style="float: none; margin:0px 0 0px 0; text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6920353431093279" data-ad-slot="2676618393"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div>					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://yongxiu.net/category/c" rel="category tag">C++</a> and tagged <a href="https://yongxiu.net/tag/c" rel="tag">C++</a>, <a href="https://yongxiu.net/tag/isearch" rel="tag">iSearch</a>, <a href="https://yongxiu.net/tag/mfc" rel="tag">MFC</a>, <a href="https://yongxiu.net/tag/%e6%90%9c%e7%b4%a2" rel="tag">搜索</a>, <a href="https://yongxiu.net/tag/%e6%a1%8c%e9%9d%a2" rel="tag">桌面</a> on <a href="https://yongxiu.net/201008/2137.html" title="5:39 pm" rel="bookmark"><time class="entry-date" datetime="2010-08-21T17:39:05-08:00">August 21, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://yongxiu.net/author/yongxiu" title="View all posts by yongxiu" rel="author">yongxiu</a></span></span>.								</footer></article><nav class="nav-single"><h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://yongxiu.net/201008/0333.html" rel="prev"><span class="meta-nav">←</span> 当年人人网的那个bug：人人网刷分器</a></span>
+					<span class="nav-next"><a href="https://yongxiu.net/201010/3067.html" rel="next">基于RLO的恶意小程序的原理及预防 <span class="meta-nav">→</span></a></span>
+				</nav><div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			2 thoughts on “<span>一个基于C++, MFC的桌面搜索工具：iSearch</span>”		</h2>
+
+		<ol class="commentlist"><li class="comment even thread-even depth-1" id="li-comment-9">
+		<article id="comment-9" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/4e2fbf1e9044b63e7fb2adea689ff311?s=44&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/4e2fbf1e9044b63e7fb2adea689ff311?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn"><a href="http://yuhanghome.net" rel="external nofollow" class="url">Abraham</a></b> </cite><a href="https://yongxiu.net/201008/2137.html#comment-9"><time datetime="2010-08-21T18:22:59-08:00">August 21, 2010 at 6:22 pm</time></a>				</header><section class="comment-content comment"><p>不错啊，顶一个~~</p>
+								</section><div class="reply">
+								</div>
+			</article></li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10">
+		<article id="comment-10" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/90b1090d56500b9f3e26c950638df584?s=44&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/90b1090d56500b9f3e26c950638df584?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn"><a href="http://aegiryy.net" rel="external nofollow" class="url">aegiryy</a></b> </cite><a href="https://yongxiu.net/201008/2137.html#comment-10"><time datetime="2011-04-30T09:37:18-08:00">April 30, 2011 at 9:37 am</time></a>				</header><section class="comment-content comment"><p>做的很不错嘛，只不过我不用windows久矣……</p>
+								</section><div class="reply">
+								</div>
+			</article></li>
+		</ol><p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div>
+
+			
+		</div>
+	</div>
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			
+
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-6920353431093279" data-ad-slot="5119158312"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://yongxiu.net/201211/10259.html">生命的意义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201210/03251.html">The Time Traveler’s Wife</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201204/26243.html">记忆，意识与唯心主义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/05241.html">做一个自由的灵魂</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/01231.html">搜索引擎内容相关性</a>
+									</li>
+					</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">anonymous</span> on <a href="https://yongxiu.net/201007/2215.html#comment-45">和朋友相聚的那些时光</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://yongxiu.net" rel="external nofollow" class="url">yongxiu</a></span> on <a href="https://yongxiu.net/201204/26243.html#comment-29">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Susan</span> on <a href="https://yongxiu.net/201204/26243.html#comment-28">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Jack Lu</span> on <a href="https://yongxiu.net/201204/26243.html#comment-27">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">shuo</span> on <a href="https://yongxiu.net/201201/05241.html#comment-26">做一个自由的灵魂</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://yongxiu.net/2012/11">November 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/10">October 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/04">April 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/01">January 2012</a></li>
+	<li><a href="https://yongxiu.net/2011/04">April 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/03">March 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/02">February 2011</a></li>
+	<li><a href="https://yongxiu.net/2010/12">December 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/10">October 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/08">August 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/07">July 2010</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul><li class="cat-item cat-item-2"><a href="https://yongxiu.net/category/c">C++</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://yongxiu.net/category/linux">linux</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="https://yongxiu.net/category/search-technology">Search Technology</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://yongxiu.net/category/%e6%84%9f%e6%82%9f">感悟</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://yongxiu.net/category/%e7%94%9f%e6%b4%bb">生活</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://yongxiu.net/category/films" title="我喜欢的那些电影">电影</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae">网络协议</a>
+</li>
+		</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+<script type="text/javascript" src="https://yongxiu.net/wp-content/themes/twentytwelve/js/navigation.js"></script></body></html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>AES &#8211; yongxiu</title>
+	<atom:link href="https://yongxiu.net/tag/aes/feed" rel="self" type="application/rss+xml" />
+	<link>https://yongxiu.net/</link>
+	<description>Make life happen, not just let it happen.</description>
+	<lastBuildDate>Sun, 26 May 2019 23:54:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.1</generator>
+
+<image>
+	<url>https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg</url>
+	<title>AES &#8211; yongxiu</title>
+	<link>https://yongxiu.net/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>浅谈公钥密码</title>
+		<link>https://yongxiu.net/201104/12198.html</link>
+				<comments>https://yongxiu.net/201104/12198.html#comments</comments>
+				<pubDate>Tue, 12 Apr 2011 12:06:33 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[网络协议]]></category>
+		<category><![CDATA[AES]]></category>
+		<category><![CDATA[MD5]]></category>
+		<category><![CDATA[RC4]]></category>
+		<category><![CDATA[RSA]]></category>
+		<category><![CDATA[对称密钥]]></category>
+		<category><![CDATA[碰撞]]></category>
+		<category><![CDATA[非对称密钥]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=198</guid>
+				<description><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/04/1.png"></a>前篇文章谈到一个<a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">非对称密钥加密系统</a>，觉得很是神奇，一直想找一个实例，最近查阅了一些资料，google了一下，找到一些，分享一下。</p><p>它的用途有很多，数字证书啊，https啊，我感触最深的就是那个ssl加密，感觉很神奇，试想你和网站中间的路由一直在监听你们的传输数据，甚至从发送证书开始，只要通过ss <span class='read-more'><a href='https://yongxiu.net/201104/12198.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p><a href="https://yongxiu.net/wp-content/uploads/2011/04/1.png"><img class="size-full wp-image-199 alignleft" title="1" src="https://yongxiu.net/wp-content/uploads/2011/04/1.png" alt="" width="308" height="320" /></a>前篇文章谈到一个<a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">非对称密钥加密系统</a>，觉得很是神奇，一直想找一个实例，最近查阅了一些资料，google了一下，找到一些，分享一下。</p>
+<p>它的用途有很多，数字证书啊，https啊，我感触最深的就是那个ssl加密，感觉很神奇，试想你和网站中间的路由一直在监听你们的传输数据，甚至从发送证书开始，只要通过ssl加密，它就不能窃取了（当然没那么绝对）。</p>
+<p>首先看左图，有一个RSA看到了吧，他是很关键的一个密码加密系统，gmail网站有一个公钥，它是对所有人公开的，任何访问它的人都可以得到，用它可以进行加密；然后它还有一个密钥，通过密钥就可以对加密内容解密，gmail的任务是保管好密钥，任何人都不能得到。</p>
+<p>大家可能会在网上搜到两个大素数的积分解困难等关键字，却不太明白具体的原理，我在这儿举个例子，例子是在一本叫《公钥密码学》上看到的，很简单，能让我们懂得基本原理。</p>
+<p>参数生成：</p>
+<p>(1) 选取两个大素数p和q (保密)</p>
+<p>(2) 计算n=pq（公开的系统参数），γ=(p-1)(q-1)(保密)</p>
+<p>(3) 随机选取整数e（公开的加密密钥），使得gcd(e, γ)=1</p>
+<p>(4) 计算d（保密,私人密钥），使得ed≡1(mod γ),即d=e-1(mod γ)</p>
+<p>(5) 加密:c=me mod n</p>
+<p>(6) 解密:m=cd mod n</p>
+<p>举一个实际的例子：</p>
+<p>p = 11, q = 23，则 n = pq = 253</p>
+<p>γ=(p-1)(q-1) = 220</p>
+<p>选取加密密钥 e = 3，显然gcd(3, 220) = 1，求得 d = 147。</p>
+<p>对于明文 m = 165，有密文 c ≡ 165 * 165 * 165 mod 253 ≡ 110</p>
+<p>对于密文 c = 110，有明文 m ≡ 110^147 mod 253 ≡ 165</p>
+<p>看，上述就是一个简单加密，解密的例子，你可能会说p, q岂不是很容易猜出来，请记住“两个<strong>大</strong>素数的积分解困难”，很大的！</p>
+<p>完成这步之后，客户端浏览器按照服务器的只是生成128位的RC4对称密钥，你可能会问，这个时候为什么不用非对称的？因为效率！非对称虽然有很多的好处，但是有效率限制，再说双方通过RC4传输，通过刚才的非对称加密已经保证这个RC4密钥的安全性了，为什么还要再用非对称呢。</p>
+<p>当然这个RC4不是绝对的，服务器也可能要求使用别的加密方法，<a href="https://yongxiu.net/wp-content/uploads/2011/04/2.png"><img class="alignright size-full wp-image-200" title="2" src="https://yongxiu.net/wp-content/uploads/2011/04/2.png" alt="" width="305" height="353" /></a>例如微软的live用的是128位的AES，QQ邮箱用了256位的AES，但他们都是对称密钥加密。</p>
+<p>顺便再提一嘴MD5，本来和密码没什么关系，但是学习的过程中，仿佛在说不可能有两个MD5一样的不同文件。我就一直在想，如果通过一个128位的字符串就能表示几G的电影，岂不是说任何文件都能压缩到128个字节，或者说128位字符串能表示所有文件？</p>
+<p>其实是我的理解错误，MD5的算法网上有很多，大家看一下就会发现，确实文件之修改一点点都会造成MD5的值发生变化。</p>
+<p>它的要求是：<br />
+对任何给定的码h，寻找x使得H(x)=h在计算上，是不可行的，称为单项性；<br />
+对任何给定的分组x，寻找不等于x的y，使得H(y)=H(x)在计算上是不可行的。称为弱抗冲突；<br />
+寻找对任何的（x，y）对，使得H(y)=H(x)在计算上是不可行的，称为强抗冲突；</p>
+<p>看，上述的都是强调在计算上，上网搜一下MD5碰撞，你就会发现存在两个不同文件MD5值相同。</p>
+<p>好，今天到这里，文章可能有疏漏，请指正！</p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201104/12198.html">https://yongxiu.net/201104/12198.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201104/12198.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>命令行 | yongxiu</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-pagenavi-css" href="https://yongxiu.net/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery-migrate.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-140817911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-140817911-1');</script><link rel="stylesheet" href="https://yongxiu.net/wp-content/plugins/wp-thumbnails/style.css" type="text/css" media="screen"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg" sizes="32x32"><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-180x180.jpg"><meta name="msapplication-TileImage" content="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-270x270.jpg"></head><body class="archive tag tag-75 wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://yongxiu.net/" title="yongxiu" rel="home">yongxiu</a></h1>
+			<h2 class="site-description">Make life happen, not just let it happen.</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="https://yongxiu.net/">Home</a></li><li class="page_item page-item-216"><a href="https://yongxiu.net/thanks">Thanks</a></li>
+<li class="page_item page-item-137"><a href="https://yongxiu.net/links">Links</a></li>
+<li class="page_item page-item-5"><a href="https://yongxiu.net/about">About</a></li>
+</ul></div>
+		</nav></header><div id="main" class="wrapper">
+
+	<section id="primary" class="site-content"><div id="content" role="main">
+
+					<header class="archive-header"><h1 class="archive-title">Tag Archives: <span>命令行</span></h1>
+
+						</header><article id="post-161" class="post-161 post type-post status-publish format-standard hentry category-linux tag-arch tag-cfdisk tag-dns tag-fdisk tag-iso tag-linux tag-u tag-vpn tag-75"><header class="entry-header"><h1 class="entry-title">
+				<a href="https://yongxiu.net/201103/01161.html" rel="bookmark">ArchLinux折腾记</a>
+			</h1>
+								</header><div class="entry-content">
+			<p><a href="https://yongxiu.net/wp-content/uploads/2011/02/arch-linux-logo.png"><img class="alignleft size-full wp-image-162" title="arch-linux-logo" src="https://yongxiu.net/wp-content/uploads/2011/02/arch-linux-logo.png" alt="" width="383" height="321"></a>Arch[ɑ:tʃ] Linux，是一种以轻量简洁为设计理念的Linux发行版。其开发团队秉承简洁、优雅、正确和代码最小化的设计宗旨。虽然可能没有Gentoo简洁，但肯定比Gentoo简单多了，我也是看到周围很多人都在使用这款linux，手痒痒也试玩了一下，折腾了2两天累死我了，感想是没点毅力千万别折腾这玩意，水平不见得有提高，装叉的代价实在有点高。</p>
+<p>先说说我的环境，已经有个Windows 7，不可能卸载，原先还有个Fedora。首先在windows下删掉了Fedora分区，然后下载了ArchLinux的安装镜像iso文件，按照网上说的，装上了很多人说的Universal-USB-Installer，但是不好使，U盘启动不能被识别，试了很多其它的工具也都不行，最后用UltraISO将镜像文件烧到了U盘，开机启动可以识别（注意UltralISO写入方式选择USB-HDD，网上说选择USB-ZIP兼容性好但是我这里开机不识别）。</p>
+<p>然后就是普通的安装方式了，网上有详细的图解教程，但是有一点，我遇到了一个问题就是硬盘分区安装文件用的是cfdisk，但是cfdisk提示我的硬盘什么结尾错误，就是不能打开，网上说解决办法是格式化整个硬盘，这不扯淡吗。。。没办法，退出安装进程，在U盘的linux下用fdisk命令新建、格式化分区，首先是：fdisk /dev/sda，然后n一个500M大小的boot分区，再n一个2G的swap分区，其他的是根目录，w命令写入。写入之后mkfs -t ext3 /dev/sda6，以ext3格式化那个boot分区，再mkswap /dev/sda7格式化swap分区，mkfs -t ext4 /dev/sda8格式化跟目录分区。然后再次进入arch/setup，这回就不用选那个Manually Partition Hard Device了，直接进入Configure block devices那个。然后选择对应的filesystem type。 然后的安装就顺利多了，最后有一个grub安装在哪里，记得选择/dev/sda，不带1，即第一个选项，当初我傻傻的选择了boot分区，结果可想而知。</p>
+<p>接下来就是最痛苦的，由于一些原因，我的计算机必须链接vpn才能上网，没错，国内网也得连vpn。于是花了很长时间痛苦的寻找命令行下链接vpn的方法，其间别提多抓狂了。甚至想过先把xorg用别的电脑下下来然后放到这里安装。。。</p>
+<p>我的最终解决方法：首先用别的电脑下一个<a href="http://www.archlinux.org/packages/core/i686/pptpclient/download/">pptpsetup安装包</a>，archlinux官网就有，然后用pacman -U 命令，网上刚开始说用pacman -A，我不知道那是什么时候的，反正我这里是不行，必须用-U，期间还有点小挫折，由于系统默认选择的中文，pacman安装显示错误乱马，无奈又改成了英文，原来我自己建的vpn文件导致安装错误，删除即可。装完pptpsetup之后</p>
+<p>pptpsetup –create vpnname –server x.x.x.x  –username yourusername –password yourpassword –encrypt –start</p>
+<p>建立一个vpn连接，然后pon vpnname即连接了，这时候如果ifconfig应该能看到ppp0了，但是注意vpn连接了，你的网却不走vpn通道，这时候还要一个命令，将路由设成走vpn</p>
+<p>route add default dev ppp0</p>
+<p>这时候你如果ping google.com，显示未知网络，恭喜你，又碰到和我一样的错误，这时候修改/etc/resolv.conf，即dns配置，从别的计算机拷一个dns写进去，然后再ping一下试试，我这个时候经过一天的折腾已经可以ping通了。</p>
+<p>好了，能联网就简单多了，接下来就按网上的很多示例，你如果愿意安装xorg也行，然后我这里安装完gnome后又出现startx无法打开，黑屏，显卡驱动的问题，安装xf86-video-intel，xf86-input-keyboard，xf86-input-mouse然后再startx，应该就能看到了。</p>
+<p>好，以上就是我安装arch的血泪史，如果你没碰到上述问题，我只能说恭喜。。。</p>
+<p>ps：经过安装各种软件之后，我发现我的arch和原先的fedora已经差不多了。。。</p>
+					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://yongxiu.net/category/linux" rel="category tag">linux</a> and tagged <a href="https://yongxiu.net/tag/arch" rel="tag">arch</a>, <a href="https://yongxiu.net/tag/cfdisk" rel="tag">cfdisk</a>, <a href="https://yongxiu.net/tag/dns" rel="tag">dns</a>, <a href="https://yongxiu.net/tag/fdisk" rel="tag">fdisk</a>, <a href="https://yongxiu.net/tag/iso" rel="tag">iso</a>, <a href="https://yongxiu.net/tag/linux" rel="tag">linux</a>, <a href="https://yongxiu.net/tag/u%e7%9b%98" rel="tag">u盘</a>, <a href="https://yongxiu.net/tag/vpn" rel="tag">vpn</a>, <a href="https://yongxiu.net/tag/%e5%91%bd%e4%bb%a4%e8%a1%8c" rel="tag">命令行</a> on <a href="https://yongxiu.net/201103/01161.html" title="11:27 am" rel="bookmark"><time class="entry-date" datetime="2011-03-01T11:27:15-08:00">March 1, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://yongxiu.net/author/yongxiu" title="View all posts by yongxiu" rel="author">yongxiu</a></span></span>.								</footer></article></div>
+	</section><div id="secondary" class="widget-area" role="complementary">
+			
+
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-6920353431093279" data-ad-slot="5119158312"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://yongxiu.net/201211/10259.html">生命的意义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201210/03251.html">The Time Traveler’s Wife</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201204/26243.html">记忆，意识与唯心主义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/05241.html">做一个自由的灵魂</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/01231.html">搜索引擎内容相关性</a>
+									</li>
+					</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">anonymous</span> on <a href="https://yongxiu.net/201007/2215.html#comment-45">和朋友相聚的那些时光</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://yongxiu.net" rel="external nofollow" class="url">yongxiu</a></span> on <a href="https://yongxiu.net/201204/26243.html#comment-29">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Susan</span> on <a href="https://yongxiu.net/201204/26243.html#comment-28">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Jack Lu</span> on <a href="https://yongxiu.net/201204/26243.html#comment-27">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">shuo</span> on <a href="https://yongxiu.net/201201/05241.html#comment-26">做一个自由的灵魂</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://yongxiu.net/2012/11">November 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/10">October 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/04">April 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/01">January 2012</a></li>
+	<li><a href="https://yongxiu.net/2011/04">April 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/03">March 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/02">February 2011</a></li>
+	<li><a href="https://yongxiu.net/2010/12">December 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/10">October 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/08">August 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/07">July 2010</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul><li class="cat-item cat-item-2"><a href="https://yongxiu.net/category/c">C++</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://yongxiu.net/category/linux">linux</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="https://yongxiu.net/category/search-technology">Search Technology</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://yongxiu.net/category/%e6%84%9f%e6%82%9f">感悟</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://yongxiu.net/category/%e7%94%9f%e6%b4%bb">生活</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://yongxiu.net/category/films" title="我喜欢的那些电影">电影</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae">网络协议</a>
+</li>
+		</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+<script type="text/javascript" src="https://yongxiu.net/wp-content/themes/twentytwelve/js/navigation.js"></script></body></html>

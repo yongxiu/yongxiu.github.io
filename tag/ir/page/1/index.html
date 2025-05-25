@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>IR | yongxiu</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-pagenavi-css" href="https://yongxiu.net/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery-migrate.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-140817911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-140817911-1');</script><link rel="stylesheet" href="https://yongxiu.net/wp-content/plugins/wp-thumbnails/style.css" type="text/css" media="screen"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg" sizes="32x32"><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-180x180.jpg"><meta name="msapplication-TileImage" content="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-270x270.jpg"></head><body class="archive tag tag-ir tag-112 wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://yongxiu.net/" title="yongxiu" rel="home">yongxiu</a></h1>
+			<h2 class="site-description">Make life happen, not just let it happen.</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="https://yongxiu.net/">Home</a></li><li class="page_item page-item-216"><a href="https://yongxiu.net/thanks">Thanks</a></li>
+<li class="page_item page-item-137"><a href="https://yongxiu.net/links">Links</a></li>
+<li class="page_item page-item-5"><a href="https://yongxiu.net/about">About</a></li>
+</ul></div>
+		</nav></header><div id="main" class="wrapper">
+
+	<section id="primary" class="site-content"><div id="content" role="main">
+
+					<header class="archive-header"><h1 class="archive-title">Tag Archives: <span>IR</span></h1>
+
+						</header><article id="post-231" class="post-231 post type-post status-publish format-standard hentry category-search-technology tag-bm25 tag-ir tag-query-likelihood tag-relevance tag-115 tag-116 tag-117 tag-118"><header class="entry-header"><h1 class="entry-title">
+				<a href="https://yongxiu.net/201201/01231.html" rel="bookmark">搜索引擎内容相关性</a>
+			</h1>
+								</header><div class="entry-content">
+			<p>最近在看搜索引擎相关书籍，在这里整理下几个IR (Information Retrieval) 的相关算法，便于以后详细分析和学习。这篇打算介绍下几个算法的大概，以后的几篇详细介绍每个算法的使用还有中文分词算法等。</p>
+<p>什么是Relevance？首先我们知道互联网有数以万计的网页，每张网页都有内容。作为搜索引擎，它的任务就是通过用户输入的关键词，理解用户的意图，找到用户想找的那张网页内容，将用户最可能需要的网页链接排好序呈献给用户，Relevance 表示的就是用户输入的关键词和每张网页的相关程度，这是一项最关乎用户体验的指标，一个搜索引擎的Relevance 做的越好，说明它的搜索结果排序越好，用户往往在第一项或前几项就能找到自己的期望内容，显然用户就更偏向于使用这款搜索引擎。</p>
+<p>不仅仅用在搜索结果，通过Relevance 我们还能再搜索结果中插入广告，将广告放在右侧或上面，这就要求广告的内容和搜索关键词相关程度越高越好。需要注意的是搜索引擎厂商不仅仅会考虑每个客户对关键词的出价是多少，还会考虑如果投放这家客户的广告，用户观看、点击这则广告的效果如何，因为首先广告分几个等级，投放后用户观看到了就需要钱，而如果用户点击的话需要更多的钱，用户如果点击这则广告、甚至点击之后出现购买更能使搜索引擎厂商受益。例如一个客户出一万元买了一个关键词“鞋子”，而他这个广告是关于路由器的，而另一个客户只出一千元，但他的广告是关于鞋子的，这个时候用户点击这则广告的概率显然要大的多，而且很可能还通过点击这则广告购买了产品，路由器的基本不会点，搜索引擎反而赚的少了，总体来说这个时候如果出鞋子的广告，不仅用户体验（找到自己想要的）更好，而且搜索引擎赚的更多。</p>
+<p>不但如此，我们还可以通过像Google Adsense 的这种平台，发布分享广告，帮助中小网站获利，这个时候更需要Relevance，通过Relevance 算法我们能够找到对应于一张网页的内容最适合这张网页的广告，什么是最适合，和内容相关（当然还要考虑很多其它因素：用户当前通过搜索什么关键词进入到这张网页、用户所在的地区，如果还能结合用户通过社交网络发布的状态、他好友的选择就更好了）！用户看到文章后看到广告能够对广告有印象，甚至去点击。当然也有一些广告无需和内容太相关，例如Nike 的广告，它甚至都不期望用户去点，因为Nike 的广告更多的是希望能对用户产生印象，用户看到Nike 的广告能在下次购买运动品牌的时候更喜欢选择这个品牌。</p>
+<p>以上展示了Relevance 的重要性，我们能看到它不仅仅关乎一款搜索引擎的好坏，更关乎这款搜索引擎的盈利，它的重要性可见一斑。</p>
+<p>一说到搜索结果排序，可能很多人首先想到的就是PageRank，诚然PageRank 对搜索结果的排序起了非常大的作用，有了Google 这样伟大的公司。根据PageRank，PR值越高代表这张网页质量越高，高质量的网页排在最前面往往符合用户的需求，但是有两点：首先PageRank 是建立在HyperLink 之上的，对于一堆独立出来的，或者说没有HyperLink的文章内容，我们需要其它的算法来判断找出用户最想要的文章；在现代的搜索结果排序中我们不能仅仅依靠PageRank，Relevance 中的很多算法能帮助找出用户之最想要。</p>
+<p>基本需求已经确定，看看我们手头有什么数据，从程序输入输出的角度来看我们要做出什么，输入是什么？海量的网页内容，英文的网页包括由单词组成的文章，中文的假设也已经分好词都是由词汇组成的文章，还有就是用户输入的关键词，当然这个关键词也是经过处理好的。输出时什么？尽量多的不遗漏的和关键词相关的网页链接，最重要的是它们和关键词的相关性（前后顺序）。</p>
+<p>初始工作，海量的网页内容和用户的输入都有一个初始的修改工作，例如将一些is, are, I 去掉，这些词过于常见，基本每张网页都会出现，不应纳入我们的检索系统。中文的文章比较头痛，需要进行分词操作，因为检索的过程必须是以词汇为单位，例如上段的第一句话“基本需求已经确定”，需要被分解成“基本/需求/已经/确定”，这样当我们搜索“基本”的时候，可能就会出项上述这句话的结果。建立索引，将这些词汇建立一张表，通过这张索引，我们能够很快地找到这篇文章等等。</p>
+<p><strong>布尔检索</strong>：对用户的输入关键词检索，查看每张网页是否有上述的关键词，如果有那么这篇文章就符合要求，我们就要显示出来，缺点明显，类似于一个Find 工具，区别不出两篇文章都包含用户输入的关键词的差别。</p>
+<p><strong>向量空间检索</strong>：考虑权值，对于每个关键词，判断这个词在一篇文章中的权值，权值的算法有很多，例如我们可以将权值简单地考虑成出现的次数，还可以考虑一个词的重要性，重要性分数乘以出现的次数，没有这个关键词则权值为0。根据检索的词，判断谁的总分数最高，则它最符合要求。</p>
+<p><strong>BM25算法</strong>：用公式描述的手段，基于海量的数据，计算每个关键词分数，文档的分数，相应于检索关键词计算它们相关性程度。基本公式</p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2012/01/2ddc5e204a1aa0069ca9c744b39fa3eb.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="2ddc5e204a1aa0069ca9c744b39fa3eb" border="0" alt="2ddc5e204a1aa0069ca9c744b39fa3eb" src="https://yongxiu.net/wp-content/uploads/2012/01/2ddc5e204a1aa0069ca9c744b39fa3eb_thumb.png" width="508" height="58"></a></p>
+<p><a href="https://yongxiu.net/wp-content/uploads/2012/01/9e44aac1ad6e4fd74bc1d4f1afabb401.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="9e44aac1ad6e4fd74bc1d4f1afabb401" border="0" alt="9e44aac1ad6e4fd74bc1d4f1afabb401" src="https://yongxiu.net/wp-content/uploads/2012/01/9e44aac1ad6e4fd74bc1d4f1afabb401_thumb.png" width="259" height="48"></a></p>
+<p>公式1：score(<em>D</em>，<em>Q</em>)， 我们所要计算的评分，即为给定搜索关键词<em>Q</em>(Query) 和给定文档<em>D</em>(Document) 的相关程度，分数越高表示相关度越高。<i>f</i>(<i>q</i><sub><i>i</i></sub>, <i>D</i>)：在给定文档<em>D</em> 中，某一个语素<i>q</i><sub><i>i </i></sub>出现的频率。<em>n</em>，<em>n</em> 个关键词。<em>|D|</em>：给定文档<em>D</em> 的长度。<em>avgdl</em>，索引中所有文档长度。另外两个参数<em>k<sub>1 </sub></em>和<em>b </em>用来调整精准度，一般情况下我们取<em>k<sub>1 </sub></em>= 1.2 ~ 2.0，<em>b </em>= 0.75。 </p>
+<p>公式2：用来计算公式1中<em>IDF(q<sub>i </sub>) </em>的值。<em>N</em>，索引中文档的总数目。<em>n(q<sub>i </sub>)</em>，索引中包含语素<i>q</i><sub><i>i </i></sub>的文档的总书目。 </p>
+<p><strong>Query Likelihood Model</strong>: 基于一般语言模型的文本检索，一般来说语言模型的研究任务是：已知文本序列中前面<em>(i-1)</em> 个词汇，第<em>i</em> 个词汇为单词<em>w</em> 的可能性有多大。统计语言模型，Ponte 和Croft 最初提出的语言模型检索方法现在经常被称为“查询条件概率模型”。这个模型假设用户头脑中有一个能够满足他的信息需求的理想文档，用户从这个理想文档中抽取词汇作为查询条件，用户所选择的查询条件词汇能够将这个理想文档同文档集合中其他文档区分开来。这样查询条件可以看作是由理想文档生成的能够表征该理想文档的文本序列。由这个假设我们可以看出信息检索系统的任务被转化为判断文档集合中每个文档与理想文档哪个最接近的问题。给定一个文档集合与用户查询条件<em>Q</em>，存在一个未知的相关模型<em>R</em>，相关模型<em>R </em>为相关文档中出现的词汇赋予一个概率值<em>P(w|R)</em>。这样相关文档被看作是从概率分布<em>P(w|R) </em>中随机抽样得到的样本。通过词汇的概率分布来分析判断文章的话题，对于话题很重要的词汇通常具有很高的概率值（相对于文章的其他词汇）。</p>
+<p>基本可以分为以上几大类，每种类别又分为很多细小的改进等，可以发现，基本上所有都是基于海量的数据进行判断几个因素：关键词的分数、文章关键词的频率、文章质量、语言模型。发展方向肯定是越来越注重文章的内容，希望计算机能够按照人类思考方式来理解文章的内容，通过搜索输入的Query，找到最能符合的文章。</p>
+<p>总结来说，做出一款搜索引擎其实不是非常难，但是做一个好的搜索引擎则是一个浩瀚的工程，每个细小的步骤每年都有无数个科学家，无数个会议，无数篇学术报告，paper 来专攻某一领域。像TREC(Text REtrieval Conference) 会议就是文本检索领域人气最旺、最权威的评测会议。相关性的提高有时是枯燥的，几个月的奋斗，提高程度并不明显，用户的体验或许依旧如此，需要考虑的因数不仅仅是关键词与内容相关性，还有地域性，时间等等一系列。涉及的知识领域包括统计、机器学习、数据挖掘等等。</p>
+<p>写这篇文章，督促自己深挖掘上述的几个算法和改良的算法，多挖挖相关论文，新年快乐~</p>
+<p> </p>
+<h4>References</h4>
+<p><a href="http://en.wikipedia.org/wiki/Relevance_(information_retrieval">http://en.wikipedia.org/wiki/Relevance_(information_retrieval)</a></p>
+<p>Search Engines: Information Retrieval in Practice</p>
+<p>The PageRank Citation Ranking: Bringing Order to the Web</p>
+<p><a href="http://en.wikipedia.org/wiki/Pagerank">http://en.wikipedia.org/wiki/Pagerank</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Okapi_BM25">http://en.wikipedia.org/wiki/Okapi_BM25</a></p>
+<p><a href="http://summerbell.iteye.com/blog/494227">http://summerbell.iteye.com/blog/494227</a></p>
+					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://yongxiu.net/category/search-technology" rel="category tag">Search Technology</a> and tagged <a href="https://yongxiu.net/tag/bm25" rel="tag">BM25</a>, <a href="https://yongxiu.net/tag/ir" rel="tag">IR</a>, <a href="https://yongxiu.net/tag/query-likelihood" rel="tag">Query Likelihood</a>, <a href="https://yongxiu.net/tag/relevance" rel="tag">Relevance</a>, <a href="https://yongxiu.net/tag/%e5%b9%bf%e5%91%8a" rel="tag">广告</a>, <a href="https://yongxiu.net/tag/%e6%8e%92%e5%ba%8f" rel="tag">排序</a>, <a href="https://yongxiu.net/tag/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e" rel="tag">搜索引擎</a>, <a href="https://yongxiu.net/tag/%e7%ae%97%e6%b3%95" rel="tag">算法</a> on <a href="https://yongxiu.net/201201/01231.html" title="10:14 pm" rel="bookmark"><time class="entry-date" datetime="2012-01-01T22:14:35-08:00">January 1, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://yongxiu.net/author/yongxiu" title="View all posts by yongxiu" rel="author">yongxiu</a></span></span>.								</footer></article></div>
+	</section><div id="secondary" class="widget-area" role="complementary">
+			
+
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-6920353431093279" data-ad-slot="5119158312"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://yongxiu.net/201211/10259.html">生命的意义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201210/03251.html">The Time Traveler’s Wife</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201204/26243.html">记忆，意识与唯心主义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/05241.html">做一个自由的灵魂</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/01231.html">搜索引擎内容相关性</a>
+									</li>
+					</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">anonymous</span> on <a href="https://yongxiu.net/201007/2215.html#comment-45">和朋友相聚的那些时光</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://yongxiu.net" rel="external nofollow" class="url">yongxiu</a></span> on <a href="https://yongxiu.net/201204/26243.html#comment-29">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Susan</span> on <a href="https://yongxiu.net/201204/26243.html#comment-28">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Jack Lu</span> on <a href="https://yongxiu.net/201204/26243.html#comment-27">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">shuo</span> on <a href="https://yongxiu.net/201201/05241.html#comment-26">做一个自由的灵魂</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://yongxiu.net/2012/11">November 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/10">October 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/04">April 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/01">January 2012</a></li>
+	<li><a href="https://yongxiu.net/2011/04">April 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/03">March 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/02">February 2011</a></li>
+	<li><a href="https://yongxiu.net/2010/12">December 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/10">October 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/08">August 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/07">July 2010</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul><li class="cat-item cat-item-2"><a href="https://yongxiu.net/category/c">C++</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://yongxiu.net/category/linux">linux</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="https://yongxiu.net/category/search-technology">Search Technology</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://yongxiu.net/category/%e6%84%9f%e6%82%9f">感悟</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://yongxiu.net/category/%e7%94%9f%e6%b4%bb">生活</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://yongxiu.net/category/films" title="我喜欢的那些电影">电影</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae">网络协议</a>
+</li>
+		</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+<script type="text/javascript" src="https://yongxiu.net/wp-content/themes/twentytwelve/js/navigation.js"></script></body></html>

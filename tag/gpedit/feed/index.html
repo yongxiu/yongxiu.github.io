@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gpedit &#8211; yongxiu</title>
+	<atom:link href="https://yongxiu.net/tag/gpedit/feed" rel="self" type="application/rss+xml" />
+	<link>https://yongxiu.net/</link>
+	<description>Make life happen, not just let it happen.</description>
+	<lastBuildDate>Sun, 26 May 2019 23:54:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.1</generator>
+
+<image>
+	<url>https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg</url>
+	<title>gpedit &#8211; yongxiu</title>
+	<link>https://yongxiu.net/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>基于RLO的恶意小程序的原理及预防</title>
+		<link>https://yongxiu.net/201010/3067.html</link>
+				<comments>https://yongxiu.net/201010/3067.html#respond</comments>
+				<pubDate>Sat, 30 Oct 2010 06:17:09 +0000</pubDate>
+		<dc:creator><![CDATA[yongxiu]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[gpedit]]></category>
+		<category><![CDATA[RLO]]></category>
+		<category><![CDATA[强制关机]]></category>
+		<category><![CDATA[恶意]]></category>
+		<category><![CDATA[文件名]]></category>
+
+		<guid isPermaLink="false">https://yongxiu.net/?p=67</guid>
+				<description><![CDATA[<p>其实也是无独有偶，最近看到一则新闻，说最近流行起来RLO控制符文件名欺骗法，使得TXT/JPG格式文件成病毒，上万用户遭欺骗。本文不想教大家方法，毕竟用这种方法干不出什么好事，只想阐述下我对它的浅显理解和预防措施。</p><p>首先先介绍一个我以前做的一个恶意关机小程序：Trick，它的基本原理很简单，就是强制关机嘛，但营造氛围和保护友人的电脑也是很重要的，所以我设定的是给你一分钟的时间，显示一个对话框，上面有倒计时，通常的朋友怎么会坐以待毙，都会想法设法关掉程序，结束这个Trick。 <span class='read-more'><a href='https://yongxiu.net/201010/3067.html'>[Read More…]</a></span></p><div class="clear-float"></div>
+		]]></description>
+								<content:encoded><![CDATA[<p>其实也是无独有偶，最近看到一则新闻，说最近流行起来RLO控制符文件名欺骗法，使得TXT/JPG格式文件成病毒，上万用户遭欺骗。本文不想教大家方法，毕竟用这种方法干不出什么好事，只想阐述下我对它的浅显理解和预防措施。</p>
+<p>首先先介绍一个我以前做的一个恶意关机小程序：Trick，它的基本原理很简单，就是强制关机嘛，但营造氛围和保护友人的电脑也是很重要的，所以我设定的是给你一分钟的时间，显示一个对话框，上面有倒计时，通常的朋友怎么会坐以待毙，都会想法设法关掉程序，结束这个Trick。<span id="more-67"></span></p>
+<p>所以我做了几项措施，来使得用户无法关闭，程序是基于MFC，其实这么点个小玩意，实在没必要劳烦MFC这个大家伙，但偷懒用个项目向导，所以。。。</p>
+<p>1. 首先在系统任务栏不显示程序，这个很好搞定了，修改下rc文件的对话框的style。</p>
+<p>2. 使对话框不显示关闭按钮，同样修改rc，EXSTYLE WS_EX_TOOLWINDOW，搞定。</p>
+<p>3. 通常对话框在标题栏点击右键又会出现系统菜单，其中有关闭选项。简单，再dialog的OnInitDialog()里面有相应函数，这个实在OnInitDialog()运行时添加进去的，所以删掉相应代码就可以了。</p>
+<p>4. 屏蔽Alt + F4快捷键，这个也很好做，自己注册一下快捷键，不做处理就可以了。</p>
+<p>好，亮点来了，用户肯定会打开任务管理器，想关闭程序，怎么办？打开程序的时候建立再建立个守护进程？屏蔽系统热键Ctrl + Alt + Del？其实有个更简单的方法，程序打开建立一个Timer，一秒钟检查一次，如果发现有任务管理器程序，send一个WM_CLOSE。</p>
+<p><img class="alignright size-full wp-image-71" title="dfeb" src="https://yongxiu.net/wp-content/uploads/2010/10/dfeb.jpg" alt="" width="238" height="163" /></p>
+<p>所以我做的程序就变成这个样子，用户打开，发现上面提示1分钟后关机，上面有倒计时，用户想法设法关闭程序，但没有办法，时间一秒一秒流逝。。。是不是很有感觉？给他1分钟，让他保存一下自己当前的工作，免得惹大麻烦啊。</p>
+<p>OK，程序搞定了，那么怎么欺骗用户打开呢？换个系统图标，这是第一步，一般隐藏后缀名的电脑你已经可以搞定了。如图，左边的那个是恶意程序。<a href="https://yongxiu.net/wp-content/uploads/2010/10/evsd.jpg"><img class="alignright size-full wp-image-70" title="evsd" src="https://yongxiu.net/wp-content/uploads/2010/10/evsd.jpg" alt="" width="225" height="168" /></a>但是如果有点爱好不隐藏后缀名的，怎么办？如下图，还是左边的是恶意程序。</p>
+<p>这就是RLO文件名欺骗，文件名被人为的插入了RLO控制符，即通过一些技术手段，使得文件名中的字符显示是从右到左，而中国用户的电脑显示字符是从左到右的。<a href="https://yongxiu.net/wp-content/uploads/2010/10/loo.jpg"><img class="size-full wp-image-72 alignleft" title="loo" src="https://yongxiu.net/wp-content/uploads/2010/10/loo.jpg" alt="" width="536" height="268" /></a></p>
+<p>如何避免呢？首先对于已经打开程序的，其实也有办法，打开命令行，如果你熟稔CMD命令的话，应该知道一些解决方法，tasklist是列出所以进程的命令，然后tskill干掉相应的进程就可以了，实在不行就注销一下，总比重启要强。</p>
+<p style="text-align: center;">关于怎样预防这类文件名伪装的木马呢，其实也很简单，首先好像你的系统要在business版本或之上，反正要支持gpedit.msc，可以自定义安全规则的这种系统，在开始菜单输入搜索gpedit.msc，打开“电脑设定”→“Windows设定”→“安全性设定”→“软体限制原则”→右键→“新增新的软体限制原则”→右键→“新增路径规则”，再输入</p>
+<p><img class="alignright size-full wp-image-74" title="Untitlesssd" src="https://yongxiu.net/wp-content/uploads/2010/10/Untitlesssd.jpg" alt="" width="329" height="480" /></p>
+<p style="text-align: center;">两个“*”，然后再两个“*”中间→右键→“插入Unicode控制码”→“RLO”，<a href="https://yongxiu.net/wp-content/uploads/2010/10/assstitled.jpg"><img class="size-full wp-image-76 aligncenter" title="assstitled" src="https://yongxiu.net/wp-content/uploads/2010/10/assstitled.jpg" alt="" width="603" height="475" /></a><br />
+点击确定，保存OK了，注销一下计算机，重新登录，再打开刚才的恶意程序，报错，大功告成。</p>
+<p style="text-align: center;"><a href="https://yongxiu.net/wp-content/uploads/2010/10/Untitled1.jpg"><img class="aligncenter size-full wp-image-88" title="Untitled" src="https://yongxiu.net/wp-content/uploads/2010/10/Untitled1.jpg" alt="" width="591" height="255" /></a></p>
+<p>总结：其实这告诫我们眼见不一定为实，我们以为后缀为txt，jpg就一定是安全的，其实还有方法让文件名欺骗我们自己的眼睛，遇到这样的文件，只要设定好系统的相关规则，避免打开这类恶意文件名的文件，应该就可以避免一般的木马，和病毒，这一类的程序危害很大啊，最后在这里，再次向那些被我开玩笑的朋友致歉~</p>
+<blockquote>
+<div style="margin-top: 15px; border:#eeffee1px solid;">
+<p><strong>原创文章，转载请注明：</strong> 转载自<a href="https://yongxiu.net/">yongxiu</a></p>
+<p><strong>本文链接地址:</strong> <a href="https://yongxiu.net/201010/3067.html">https://yongxiu.net/201010/3067.html</a></p>
+</div>
+</blockquote>
+]]></content:encoded>
+							<wfw:commentRss>https://yongxiu.net/201010/3067.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

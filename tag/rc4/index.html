@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>RC4 | yongxiu</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://yongxiu.net/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-pagenavi-css" href="https://yongxiu.net/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://yongxiu.net/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://yongxiu.net/wp-includes/js/jquery/jquery-migrate.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-140817911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-140817911-1');</script><link rel="stylesheet" href="https://yongxiu.net/wp-content/plugins/wp-thumbnails/style.css" type="text/css" media="screen"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-32x32.jpg" sizes="32x32"><link rel="icon" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-180x180.jpg"><meta name="msapplication-TileImage" content="https://yongxiu.net/wp-content/uploads/2019/05/cropped-740b6f318ec24aa1a8018e30-270x270.jpg"></head><body class="archive tag tag-rc4 tag-43 wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://yongxiu.net/" title="yongxiu" rel="home">yongxiu</a></h1>
+			<h2 class="site-description">Make life happen, not just let it happen.</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="https://yongxiu.net/">Home</a></li><li class="page_item page-item-216"><a href="https://yongxiu.net/thanks">Thanks</a></li>
+<li class="page_item page-item-137"><a href="https://yongxiu.net/links">Links</a></li>
+<li class="page_item page-item-5"><a href="https://yongxiu.net/about">About</a></li>
+</ul></div>
+		</nav></header><div id="main" class="wrapper">
+
+	<section id="primary" class="site-content"><div id="content" role="main">
+
+					<header class="archive-header"><h1 class="archive-title">Tag Archives: <span>RC4</span></h1>
+
+						</header><article id="post-198" class="post-198 post type-post status-publish format-standard hentry category-9 tag-aes tag-md5 tag-rc4 tag-rsa tag-81 tag-99 tag-105"><header class="entry-header"><h1 class="entry-title">
+				<a href="https://yongxiu.net/201104/12198.html" rel="bookmark">浅谈公钥密码</a>
+			</h1>
+								</header><div class="entry-content">
+			<p><a href="https://yongxiu.net/wp-content/uploads/2011/04/1.png"><img class="size-full wp-image-199 alignleft" title="1" src="https://yongxiu.net/wp-content/uploads/2011/04/1.png" alt="" width="308" height="320"></a>前篇文章谈到一个<a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">非对称密钥加密系统</a>，觉得很是神奇，一直想找一个实例，最近查阅了一些资料，google了一下，找到一些，分享一下。</p>
+<p>它的用途有很多，数字证书啊，https啊，我感触最深的就是那个ssl加密，感觉很神奇，试想你和网站中间的路由一直在监听你们的传输数据，甚至从发送证书开始，只要通过ssl加密，它就不能窃取了（当然没那么绝对）。</p>
+<p>首先看左图，有一个RSA看到了吧，他是很关键的一个密码加密系统，gmail网站有一个公钥，它是对所有人公开的，任何访问它的人都可以得到，用它可以进行加密；然后它还有一个密钥，通过密钥就可以对加密内容解密，gmail的任务是保管好密钥，任何人都不能得到。</p>
+<p>大家可能会在网上搜到两个大素数的积分解困难等关键字，却不太明白具体的原理，我在这儿举个例子，例子是在一本叫《公钥密码学》上看到的，很简单，能让我们懂得基本原理。</p>
+<p>参数生成：</p>
+<p>(1) 选取两个大素数p和q (保密)</p>
+<p>(2) 计算n=pq（公开的系统参数），γ=(p-1)(q-1)(保密)</p>
+<p>(3) 随机选取整数e（公开的加密密钥），使得gcd(e, γ)=1</p>
+<p>(4) 计算d（保密,私人密钥），使得ed≡1(mod γ),即d=e-1(mod γ)</p>
+<p>(5) 加密:c=me mod n</p>
+<p>(6) 解密:m=cd mod n</p>
+<p>举一个实际的例子：</p>
+<p>p = 11, q = 23，则 n = pq = 253</p>
+<p>γ=(p-1)(q-1) = 220</p>
+<p>选取加密密钥 e = 3，显然gcd(3, 220) = 1，求得 d = 147。</p>
+<p>对于明文 m = 165，有密文 c ≡ 165 * 165 * 165 mod 253 ≡ 110</p>
+<p>对于密文 c = 110，有明文 m ≡ 110^147 mod 253 ≡ 165</p>
+<p>看，上述就是一个简单加密，解密的例子，你可能会说p, q岂不是很容易猜出来，请记住“两个<strong>大</strong>素数的积分解困难”，很大的！</p>
+<p>完成这步之后，客户端浏览器按照服务器的只是生成128位的RC4对称密钥，你可能会问，这个时候为什么不用非对称的？因为效率！非对称虽然有很多的好处，但是有效率限制，再说双方通过RC4传输，通过刚才的非对称加密已经保证这个RC4密钥的安全性了，为什么还要再用非对称呢。</p>
+<p>当然这个RC4不是绝对的，服务器也可能要求使用别的加密方法，<a href="https://yongxiu.net/wp-content/uploads/2011/04/2.png"><img class="alignright size-full wp-image-200" title="2" src="https://yongxiu.net/wp-content/uploads/2011/04/2.png" alt="" width="305" height="353"></a>例如微软的live用的是128位的AES，QQ邮箱用了256位的AES，但他们都是对称密钥加密。</p>
+<p>顺便再提一嘴MD5，本来和密码没什么关系，但是学习的过程中，仿佛在说不可能有两个MD5一样的不同文件。我就一直在想，如果通过一个128位的字符串就能表示几G的电影，岂不是说任何文件都能压缩到128个字节，或者说128位字符串能表示所有文件？</p>
+<p>其实是我的理解错误，MD5的算法网上有很多，大家看一下就会发现，确实文件之修改一点点都会造成MD5的值发生变化。</p>
+<p>它的要求是：<br>
+对任何给定的码h，寻找x使得H(x)=h在计算上，是不可行的，称为单项性；<br>
+对任何给定的分组x，寻找不等于x的y，使得H(y)=H(x)在计算上是不可行的。称为弱抗冲突；<br>
+寻找对任何的（x，y）对，使得H(y)=H(x)在计算上是不可行的，称为强抗冲突；</p>
+<p>看，上述的都是强调在计算上，上网搜一下MD5碰撞，你就会发现存在两个不同文件MD5值相同。</p>
+<p>好，今天到这里，文章可能有疏漏，请指正！</p>
+					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae" rel="category tag">网络协议</a> and tagged <a href="https://yongxiu.net/tag/aes" rel="tag">AES</a>, <a href="https://yongxiu.net/tag/md5" rel="tag">MD5</a>, <a href="https://yongxiu.net/tag/rc4" rel="tag">RC4</a>, <a href="https://yongxiu.net/tag/rsa" rel="tag">RSA</a>, <a href="https://yongxiu.net/tag/%e5%af%b9%e7%a7%b0%e5%af%86%e9%92%a5" rel="tag">对称密钥</a>, <a href="https://yongxiu.net/tag/%e7%a2%b0%e6%92%9e" rel="tag">碰撞</a>, <a href="https://yongxiu.net/tag/%e9%9d%9e%e5%af%b9%e7%a7%b0%e5%af%86%e9%92%a5" rel="tag">非对称密钥</a> on <a href="https://yongxiu.net/201104/12198.html" title="8:06 pm" rel="bookmark"><time class="entry-date" datetime="2011-04-12T20:06:33-08:00">April 12, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://yongxiu.net/author/yongxiu" title="View all posts by yongxiu" rel="author">yongxiu</a></span></span>.								</footer></article></div>
+	</section><div id="secondary" class="widget-area" role="complementary">
+			
+
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-6920353431093279" data-ad-slot="5119158312"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://yongxiu.net/201211/10259.html">生命的意义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201210/03251.html">The Time Traveler’s Wife</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201204/26243.html">记忆，意识与唯心主义</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/05241.html">做一个自由的灵魂</a>
+									</li>
+											<li>
+					<a href="https://yongxiu.net/201201/01231.html">搜索引擎内容相关性</a>
+									</li>
+					</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">anonymous</span> on <a href="https://yongxiu.net/201007/2215.html#comment-45">和朋友相聚的那些时光</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://yongxiu.net" rel="external nofollow" class="url">yongxiu</a></span> on <a href="https://yongxiu.net/201204/26243.html#comment-29">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Susan</span> on <a href="https://yongxiu.net/201204/26243.html#comment-28">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">Jack Lu</span> on <a href="https://yongxiu.net/201204/26243.html#comment-27">记忆，意识与唯心主义</a></li><li class="recentcomments"><span class="comment-author-link">shuo</span> on <a href="https://yongxiu.net/201201/05241.html#comment-26">做一个自由的灵魂</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://yongxiu.net/2012/11">November 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/10">October 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/04">April 2012</a></li>
+	<li><a href="https://yongxiu.net/2012/01">January 2012</a></li>
+	<li><a href="https://yongxiu.net/2011/04">April 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/03">March 2011</a></li>
+	<li><a href="https://yongxiu.net/2011/02">February 2011</a></li>
+	<li><a href="https://yongxiu.net/2010/12">December 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/10">October 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/08">August 2010</a></li>
+	<li><a href="https://yongxiu.net/2010/07">July 2010</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul><li class="cat-item cat-item-2"><a href="https://yongxiu.net/category/c">C++</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://yongxiu.net/category/linux">linux</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="https://yongxiu.net/category/search-technology">Search Technology</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://yongxiu.net/category/%e6%84%9f%e6%82%9f">感悟</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://yongxiu.net/category/%e7%94%9f%e6%b4%bb">生活</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://yongxiu.net/category/films" title="我喜欢的那些电影">电影</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://yongxiu.net/category/%e7%bd%91%e7%bb%9c%e5%8d%8f%e8%ae%ae">网络协议</a>
+</li>
+		</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+<script type="text/javascript" src="https://yongxiu.net/wp-content/themes/twentytwelve/js/navigation.js"></script></body></html>
